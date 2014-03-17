@@ -103,7 +103,7 @@ class team {
         $db = \db::getdb();
 
         $query = $db->query('SELECT Count(*) as sayi FROM team');
-        return $query->fetch(\PDO::FETCH_ASSOC)['sayi'];
+        return end($query->fetch(\PDO::FETCH_ASSOC));
 
     }
 
